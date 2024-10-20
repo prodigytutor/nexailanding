@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { Background } from '../background/Background';
 import { Button } from '../button/Button';
-import { HeroOneButton } from '../hero/HeroOneButton';
+import { HeroOneButtonExtendedCTA } from '../hero/HeroOneButtonExtendedCTA';
 import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
@@ -12,30 +12,29 @@ const Hero = () => (
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
         <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            GitHub
-          </Link>
+          <Link href="#">Roadmap</Link>
         </li>
         <li>
-          <Link href="/">Sign in</Link>
+          <Link href="/sign-in">Sign in</Link>
         </li>
       </NavbarTwoColumns>
     </Section>
 
     <Section yPadding="pt-20 pb-32">
-      <HeroOneButton
+      <HeroOneButtonExtendedCTA
         title={
           <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
+            {'Unlock the Power of AI for everyone \n'}
+            <span className="text-primary-500">No Coding Necessary</span>
           </>
         }
-        description="The easiest way to build a React landing page in seconds."
+        description="At NexAI, we make artificial intelligence simple, approachable, and practical. Whether you're an entrepreneur, professional, or just curious, our tools, courses, and community are built to empower you with AI skills, without the steep learning curve."
         button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
-            <Button xl>Download Your Free Theme</Button>
+          <Link href="#">
+            <Button xl>Get Early Access</Button>
           </Link>
         }
+        cta="Join thousands of users already benefiting from NexAI’s tools and courses"
       />
     </Section>
   </Background>
